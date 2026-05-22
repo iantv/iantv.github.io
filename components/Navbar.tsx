@@ -1,13 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const isXR = pathname === "/xr-research" || pathname === "/";
-  const isFS = pathname === "/fullstack";
-
   return (
     <header
       style={{
@@ -49,18 +44,37 @@ export default function Navbar() {
           tanya_pro_vr
         </Link>
 
-        {/* Mode toggle */}
+        {/* Nav links */}
         <nav style={{ display: "flex", alignItems: "center", gap: 4 }}>
-          <Link href="/xr-research" className={`mode-toggle-btn${isXR ? " active" : ""}`}>
-            XR &amp; 3D
-          </Link>
-          <Link href="/fullstack" className={`mode-toggle-btn${isFS ? " active" : ""}`}>
-            CV &amp; AI
-          </Link>
+          {[
+            { label: "About", href: "#about" },
+            { label: "Experience", href: "#experience" },
+            { label: "Projects", href: "#projects" },
+            { label: "Contact", href: "#contact" },
+          ].map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              style={{
+                fontSize: 13,
+                fontWeight: 500,
+                padding: "6px 12px",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                borderRadius: 6,
+                transition: "color 0.15s",
+                letterSpacing: "0.01em",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = "var(--text)")}
+              onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = "var(--text-muted)")}
+            >
+              {label}
+            </a>
+          ))}
         </nav>
 
         {/* Right actions */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <a
             href="#"
             style={{
@@ -86,15 +100,18 @@ export default function Navbar() {
           >
             Resume ↗
           </a>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
             {[
               { icon: "GH", label: "GitHub", href: "https://github.com/iantv" },
               { icon: "LI", label: "LinkedIn", href: "https://www.linkedin.com/in/iantv/" },
+              { icon: "TG", label: "Telegram", href: "https://t.me/tanya_pro_vr" },
             ].map(({ icon, label, href }) => (
               <a
                 key={icon}
                 href={href}
                 title={label}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   width: 30,
                   height: 30,

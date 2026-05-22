@@ -1,41 +1,13 @@
 "use client";
 
-interface HeroProps {
-  mode: "xr" | "cv";
-}
-
-const content = {
-  xr: {
-    label: "XR & 3D Engineer",
-    heading: "Building Real-Time\nXR Experiences",
-    subheading: "Software engineer specializing in real-time 3D systems, VR/AR applications and XR platforms — Unity, Unreal Engine, WebXR and beyond.",
-    pillars: [
-      { num: "01", text: "Led end-to-end XR platform development at MTS (Future Crew) — Gaussian Splatting pipeline for real-time 3D reconstruction in XR environments." },
-      { num: "02", text: "Specialization in Unity (C#), Unreal Engine, WebXR, OpenGL/GLSL across VR, AR, HoloLens and mobile XR platforms." },
-      { num: "03", text: "Built and managed 8-person cross-functional team (VR, ML, DevOps, QA). Drove Spherum 3D from R&D to Steam release." },
-    ],
-  },
-  cv: {
-    label: "Computer Vision & AI",
-    heading: "Real-Time Vision\n& 3D Reconstruction",
-    subheading: "Building computer vision systems, 3D reconstruction pipelines and AI-powered AR applications using C++, Python, OpenCV and OpenGL.",
-    pillars: [
-      { num: "01", text: "Designed Gaussian Splatting pipeline for real-time 3D rendering in XR environments at MTS Web Services (2024–2025)." },
-      { num: "02", text: "Built real-time face detection, tracking and 3D overlay in C++/Qt/OpenGL — open-source AR-Hair (15★, 7 forks on GitHub)." },
-      { num: "03", text: "YOLOv3 real-time coin detection (>85% accuracy, 400k+ images, ~200 classes). Demonstrated at Eastern Economic Forum 2019." },
-    ],
-  },
-};
-
-export default function Hero({ mode }: HeroProps) {
-  const c = content[mode];
-
+export default function Hero() {
   return (
     <section
+      id="about"
       style={{
         maxWidth: 1100,
         margin: "0 auto",
-        padding: "80px 24px 60px",
+        padding: "80px 24px 64px",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gap: 48,
@@ -72,7 +44,7 @@ export default function Hero({ mode }: HeroProps) {
               boxShadow: "0 0 8px var(--accent)",
             }}
           />
-          {c.label}
+          Software Engineer · XR / 3D / CV
         </div>
 
         <h1
@@ -87,7 +59,7 @@ export default function Hero({ mode }: HeroProps) {
             marginBottom: 20,
           }}
         >
-          {c.heading}
+          {"Building Real-Time\nXR & 3D Systems"}
         </h1>
 
         <p
@@ -99,7 +71,7 @@ export default function Hero({ mode }: HeroProps) {
             maxWidth: 420,
           }}
         >
-          {c.subheading}
+          From Gaussian Splatting pipelines to immersive VR training — combining computer vision, real-time rendering and XR engineering to build things that didn&apos;t exist before.
         </p>
 
         <div
@@ -152,9 +124,22 @@ export default function Hero({ mode }: HeroProps) {
         </div>
       </div>
 
-      {/* Right — pillar list */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-        {c.pillars.map((p, i) => (
+      {/* Right — 3 pillars */}
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        {[
+          {
+            num: "01",
+            text: "Led end-to-end XR platform at MTS (Future Crew) — Gaussian Splatting pipeline for real-time 3D reconstruction. Built and managed 8-person cross-functional team.",
+          },
+          {
+            num: "02",
+            text: "10+ shipped XR applications — Unity, Unreal Engine, WebXR, ARKit, ARCore, MRTK, HoloLens, Oculus Quest, HTC Vive.",
+          },
+          {
+            num: "03",
+            text: "Deep C++/OpenCV background: real-time face tracking AR (open-source, 15★), YOLOv3 object detection (400k+ images, >85% accuracy).",
+          },
+        ].map((p, i) => (
           <div
             key={p.num}
             className={`animate-fade-up delay-${i + 2}`}
@@ -162,7 +147,7 @@ export default function Hero({ mode }: HeroProps) {
               display: "flex",
               gap: 16,
               padding: "20px 0",
-              borderBottom: i < c.pillars.length - 1 ? "1px solid var(--border)" : "none",
+              borderBottom: i < 2 ? "1px solid var(--border)" : "none",
             }}
           >
             <span className="section-number" style={{ paddingTop: 2, minWidth: 22 }}>

@@ -2,21 +2,29 @@
 
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import type { Project } from "@/data/projects";
+import type { Project, FilterTag } from "@/data/projects";
 
 interface Props {
   projects: Project[];
-  mode: "xr" | "cv";
 }
 
-type Filter = "all" | "featured";
+type Filter = "all" | FilterTag;
 
-export default function ProjectsSection({ projects, mode }: Props) {
+const FILTERS: { key: Filter; label: string }[] = [
+  { key: "all",      label: "All" },
+  { key: "vr-ar",   label: "VR / AR" },
+  { key: "cv",      label: "Computer Vision" },
+  { key: "3d",      label: "3D & Reconstruction" },
+  { key: "research",label: "Research" },
+];
+
+export default function ProjectsSection({ projects }: Props) {
   const [filter, setFilter] = useState<Filter>("all");
 
-  const filtered = filter === "featured" ? projects.filter(p => p.featured) : projects;
-
-  const sectionLabel = mode === "xr" ? "XR & 3D Projects" : "CV & AI Projects";
+  const filtered =
+    filter === "all"
+      ? projects
+      : projects.filter(p => p.filterTags.includes(filter as FilterTag));
 
   return (
     <section
@@ -34,22 +42,15 @@ export default function ProjectsSection({ projects, mode }: Props) {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          marginBottom: 32,
+          marginBottom: 28,
           flexWrap: "wrap",
           gap: 16,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <span className="section-number">03</span>
-          <h2
-            style={{
-              fontSize: 22,
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              color: "var(--text)",
-            }}
-          >
-            {sectionLabel}
+          <h2 style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)" }}>
+            Projects
           </h2>
           <span
             style={{
@@ -61,51 +62,49 @@ export default function ProjectsSection({ projects, mode }: Props) {
               borderRadius: 20,
             }}
           >
-            {projects.length}
+            {filtered.length}
           </span>
         </div>
+      </div>
 
-        {/* Filter tabs */}
-        <div
-          style={{
-            display: "flex",
-            gap: 4,
-            background: "#0f0f0f",
-            border: "1px solid var(--border)",
-            borderRadius: 8,
-            padding: 3,
-          }}
-        >
-          {(["all", "featured"] as Filter[]).map(f => (
-            <button
-              key={f}
-              onClick={() => setFilter(f)}
-              style={{
-                fontSize: 12,
-                fontWeight: 500,
-                padding: "5px 12px",
-                borderRadius: 6,
-                border: "none",
-                cursor: "pointer",
-                letterSpacing: "0.02em",
-                textTransform: "capitalize",
-                transition: "all 0.15s",
-                background: filter === f ? "#1e1e1e" : "transparent",
-                color: filter === f ? "var(--text)" : "var(--text-muted)",
-              }}
-            >
-              {f === "featured" ? "★ Featured" : "All"}
-            </button>
-          ))}
-        </div>
+      {/* Tag filter */}
+      <div
+        style={{
+          display: "flex",
+          gap: 6,
+          flexWrap: "wrap",
+          marginBottom: 28,
+        }}
+      >
+        {FILTERS.map(f => (
+          <button
+            key={f.key}
+            onClick={() => setFilter(f.key)}
+            style={{
+              fontSize: 12,
+              fontWeight: 500,
+              padding: "6px 14px",
+              borderRadius: 20,
+              border: "1px solid",
+              cursor: "pointer",
+              letterSpacing: "0.02em",
+              transition: "all 0.15s",
+              borderColor: filter === f.key ? "rgba(226,255,93,0.35)" : "var(--border)",
+              background: filter === f.key ? "rgba(226,255,93,0.08)" : "transparent",
+              color: filter === f.key ? "var(--accent)" : "var(--text-muted)",
+            }}
+          >
+            {f.label}
+          </button>
+        ))}
       </div>
 
       {/* Grid */}
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-          gap: 16,
+          gridTemplateColumns: "repeat(auto-fill, minmax(310px, 1fr))",
+          gap: 14,
         }}
       >
         {filtered.map((project, i) => (

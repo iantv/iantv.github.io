@@ -1,5 +1,16 @@
-import { redirect } from "next/navigation";
+import Hero from "@/components/Hero";
+import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
+import { projects } from "@/data/projects";
 
 export default function Home() {
-  redirect("/xr-research");
+  return (
+    <>
+      <Hero />
+      <ExperienceSection />
+      <ProjectsSection projects={projects} />
+      <ContactSection />
+    </>
+  );
 }

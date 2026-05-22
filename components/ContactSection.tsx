@@ -48,6 +48,7 @@ export default function ContactSection() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {[
               { label: "Email", value: "ian.tatiana.v@gmail.com", href: "mailto:ian.tatiana.v@gmail.com" },
+              { label: "Telegram", value: "@tanya_pro_vr", href: "https://t.me/tanya_pro_vr" },
               { label: "GitHub", value: "github.com/iantv", href: "https://github.com/iantv" },
               { label: "LinkedIn", value: "linkedin.com/in/iantv", href: "https://www.linkedin.com/in/iantv/" },
               { label: "Site", value: "yantv.dev", href: "https://yantv.dev/en" },
