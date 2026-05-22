@@ -41,7 +41,7 @@ export default function Navbar() {
           }}
         >
           <span style={{ color: "var(--accent)" }}>◆</span>
-          tanya_pro_vr
+          Tatiana Zueva
         </Link>
 
         {/* Nav links */}
