@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "static.tildacdn.com" },
+      { protocol: "https", hostname: "optim.tildacdn.com" },
+    ],
   },
 };
 

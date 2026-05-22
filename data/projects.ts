@@ -7,6 +7,7 @@ export interface Project {
   filterTags: FilterTag[];
   displayTags: string[];
   featured: boolean;
+  imageUrl?: string;
   liveUrl?: string;
   sourceUrl?: string;
   tech: string[];
@@ -25,6 +26,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Spherum 3D — VR Volumetric Player",
+    imageUrl: "https://static.tildacdn.com/tild6439-3261-4461-b638-303339373565/spherum.jpg",
     description: "Led VR application for volumetric video playback on Oculus Quest and HTC Vive. Drove the project from R&D to public release on Steam.",
     filterTags: ["vr-ar", "3d"],
     displayTags: ["VR", "3D"],
@@ -44,6 +46,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Hairstyle AR — Real-Time Face Tracking",
+    imageUrl: "https://static.tildacdn.com/tild6231-6232-4635-b464-333338356361/cfD9pU955vo.jpg",
     description: "Real-time AR application for interactive 3D hairstyle try-on. Face detection and tracking with OpenCV/Dlib, 3D rendering with OpenGL. Open-source: 15★, 7 forks.",
     filterTags: ["cv", "vr-ar"],
     displayTags: ["CV", "AR", "OpenGL"],
@@ -54,6 +57,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Coin Recognition — Sberbank",
+    imageUrl: "https://static.tildacdn.com/tild3665-3933-4339-b361-633465616234/what-coins-does-Sber.webp",
     description: "Real-time coin detection and classification with YOLOv3. Dataset of 400k+ annotated images, ~200 classes, >85% accuracy. Demonstrated at Eastern Economic Forum 2019.",
     filterTags: ["cv"],
     displayTags: ["CV", "AI", "Python"],
@@ -63,6 +67,7 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "VR Training Simulator — Dubai Municipality",
+    imageUrl: "https://static.tildacdn.com/tild6633-6164-4034-b731-316436623938/croc.jpg",
     description: "VR training system for municipal employees covering water treatment facility operations. Includes automated level generation via procedural algorithms.",
     filterTags: ["vr-ar"],
     displayTags: ["VR", "Training"],
@@ -72,6 +77,7 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Englishville — VR Language Learning",
+    imageUrl: "https://static.tildacdn.com/tild3862-3865-4638-b535-636563346265/photo_2020-08-21_10-.jpg",
     description: "VR-based English language learning app with interactive NPCs, real-time speech recognition and immersive communicative scenarios.",
     filterTags: ["vr-ar", "research"],
     displayTags: ["VR", "Research"],
@@ -82,6 +88,7 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "Holo Interior — Mixed Reality Design",
+    imageUrl: "https://static.tildacdn.com/tild6532-6139-4966-b263-333437303030/2019-02-14_16-21-06.png",
     description: "Mixed reality prototype for Microsoft HoloLens enabling interior design: wallpaper changes and furniture placement with real-time cost estimation.",
     filterTags: ["vr-ar"],
     displayTags: ["MR", "HoloLens"],
@@ -91,6 +98,7 @@ export const projects: Project[] = [
   {
     id: 9,
     title: "AR Primorye — Regional Investment Platform",
+    imageUrl: "https://static.tildacdn.com/tild6637-3237-4135-b037-376662313963/photo.png",
     description: "Mobile AR application demonstrating investment projects, regional industry centers and brands of Primorsky Region for government showcase.",
     filterTags: ["vr-ar"],
     displayTags: ["AR", "Mobile"],
@@ -100,6 +108,7 @@ export const projects: Project[] = [
   {
     id: 10,
     title: "AR Exhibition Stands",
+    imageUrl: "https://static.tildacdn.com/tild3761-3939-4761-b965-396534303366/noroot.png",
     description: "Exhibition stand AR app using marker recognition to trigger 3D graphics, animations and interactive elements for Primorsky Region events.",
     filterTags: ["vr-ar"],
     displayTags: ["AR", "Vuforia"],
@@ -109,6 +118,7 @@ export const projects: Project[] = [
   {
     id: 11,
     title: "Tower Defense: Save The Queen",
+    imageUrl: "https://static.tildacdn.com/tild6333-6134-4164-b632-633062303663/noroot.png",
     description: "Mobile AR tower defense game. Team lead: two developers, two 3D designers. Marker-based AR with real-time physics and game mechanics.",
     filterTags: ["vr-ar"],
     displayTags: ["AR", "Game"],
