@@ -76,27 +76,23 @@ export default function Navbar() {
         {/* Right actions */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <a
-            href="#"
+            href="https://drive.google.com/file/d/1boGG2krmmgp7hhVdcFxZno9nrTLBBd2O/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               fontSize: 12,
-              fontWeight: 500,
-              color: "var(--text-dim)",
+              fontWeight: 700,
+              color: "#000",
               textDecoration: "none",
-              letterSpacing: "0.04em",
+              letterSpacing: "0.05em",
               textTransform: "uppercase",
-              padding: "5px 10px",
-              border: "1px solid var(--border)",
+              padding: "6px 12px",
+              background: "var(--accent)",
               borderRadius: 6,
-              transition: "all 0.15s",
+              transition: "opacity 0.15s",
             }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLElement).style.color = "var(--text)";
-              (e.currentTarget as HTMLElement).style.borderColor = "var(--border-hover)";
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLElement).style.color = "var(--text-dim)";
-              (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
-            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = "0.85")}
+            onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = "1")}
           >
             Resume ↗
           </a>
@@ -104,7 +100,8 @@ export default function Navbar() {
             {[
               { icon: "GH", label: "GitHub", href: "https://github.com/iantv" },
               { icon: "LI", label: "LinkedIn", href: "https://www.linkedin.com/in/iantv/" },
-              { icon: "TG", label: "Telegram", href: "https://t.me/tanya_pro_vr" },
+              { icon: "TG", label: "Telegram", href: "https://t.me/iantv" },
+              { icon: "CH", label: "VR Channel", href: "https://t.me/tanya_pro_vr" },
             ].map(({ icon, label, href }) => (
               <a
                 key={icon}
