@@ -31,7 +31,7 @@ export const projects: Project[] = [
     filterTags: ["vr-ar", "3d"],
     displayTags: ["VR", "3D"],
     featured: true,
-    liveUrl: "https://store.steampowered.com/app/1581680/Spherum_3D/",
+    liveUrl: "https://store.steampowered.com/app/2223230/Spherum_3D/",
     tech: ["Unity", "C#", "SteamVR", "AWS", "Firebase", "Photon SDK"],
   },
   {
