@@ -4,6 +4,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
+      className="contact-section"
       style={{
         maxWidth: 1100,
         margin: "0 auto",
@@ -25,14 +26,7 @@ export default function ContactSection() {
         </h2>
       </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 32,
-          alignItems: "start",
-        }}
-      >
+      <div className="contact-grid">
         <div>
           <p
             style={{

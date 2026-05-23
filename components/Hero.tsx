@@ -4,6 +4,7 @@ export default function Hero() {
   return (
     <section
       id="about"
+      className="hero-section"
       style={{
         maxWidth: 1100,
         margin: "0 auto",
@@ -14,7 +15,7 @@ export default function Hero() {
     >
       {/* Heading — centered at top */}
       <h1
-        className="animate-fade-up"
+        className="animate-fade-up hero-heading"
         style={{
           fontSize: "clamp(36px, 5.5vw, 72px)",
           fontWeight: 800,
@@ -29,14 +30,7 @@ export default function Hero() {
       </h1>
 
       {/* Two-column body */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 48,
-          alignItems: "start",
-        }}
-      >
+      <div className="hero-body-grid">
         {/* Left */}
         <div>
           {/* Avatar */}

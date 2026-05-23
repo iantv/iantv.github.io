@@ -76,6 +76,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
+      className="exp-section"
       style={{
         maxWidth: 1100,
         margin: "0 auto",
@@ -94,11 +95,8 @@ export default function ExperienceSection() {
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="animate-fade-up"
+            className="animate-fade-up exp-row"
             style={{
-              display: "grid",
-              gridTemplateColumns: "160px 1fr",
-              gap: 32,
               padding: "28px 0",
               borderBottom: i < experiences.length - 1 ? "1px solid var(--border)" : "none",
               animationDelay: `${i * 0.1}s`,
@@ -106,7 +104,7 @@ export default function ExperienceSection() {
             }}
           >
             {/* Left: period */}
-            <div style={{ paddingTop: 2 }}>
+            <div className="exp-period" style={{ paddingTop: 2 }}>
               <span style={{ fontSize: 12, color: "var(--text-muted)", fontWeight: 500, letterSpacing: "0.02em" }}>
                 {exp.period}
               </span>

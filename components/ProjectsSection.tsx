@@ -29,6 +29,7 @@ export default function ProjectsSection({ projects }: Props) {
   return (
     <section
       id="projects"
+      className="projects-section"
       style={{
         maxWidth: 1100,
         margin: "0 auto",
@@ -100,13 +101,7 @@ export default function ProjectsSection({ projects }: Props) {
       </div>
 
       {/* Grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(310px, 1fr))",
-          gap: 14,
-        }}
-      >
+      <div className="projects-grid">
         {filtered.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}

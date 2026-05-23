@@ -45,7 +45,7 @@ export default function Navbar() {
         </Link>
 
         {/* Nav links */}
-        <nav style={{ display: "flex", alignItems: "center", gap: 4 }}>
+        <nav className="nav-links" style={{ display: "flex", alignItems: "center", gap: 4 }}>
           {[
             { label: "About", href: "#about" },
             { label: "Experience", href: "#experience" },
@@ -96,7 +96,7 @@ export default function Navbar() {
           >
             Resume ↗
           </a>
-          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <div className="nav-social" style={{ display: "flex", alignItems: "center", gap: 6 }}>
             {[
               { icon: "GH", label: "GitHub", href: "https://github.com/iantv" },
               { icon: "LI", label: "LinkedIn", href: "https://www.linkedin.com/in/iantv/" },
