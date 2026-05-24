@@ -16,8 +16,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "XR Platform — Real-Time 3D Reconstruction",
-    description: "Led end-to-end development of an XR platform with Gaussian Splatting pipeline for real-time 3D rendering. Managed 8-person cross-functional team (VR, ML, DevOps, QA).",
+    title: "XR Platform for Real-Time 3D Reconstruction",
+    description: "Led development of an XR platform for real-time 3D scene reconstruction and visualization using Gaussian Splatting. Coordinated cross-functional work across ML, XR, backend and DevOps teams.",
     filterTags: ["vr-ar", "3d", "cv"],
     displayTags: ["XR", "3D", "Tech Lead"],
     featured: true,
@@ -36,8 +36,8 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Gaussian Splatting Pipeline",
-    description: "Real-time 3D reconstruction pipeline using Gaussian Splatting for XR visualization. Optimized rendering and data processing for real-time performance in XR environments.",
+    title: "Gaussian Splatting Scene Digitization",
+    description: "Developed a pipeline for real-world environment digitization and real-time 3D reconstruction using Gaussian Splatting for immersive XR visualization.",
     filterTags: ["cv", "3d", "vr-ar"],
     displayTags: ["CV", "3D", "XR"],
     featured: true,
@@ -45,6 +45,15 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    title: "Research on AI 3D Avatars with Facial Expressions",
+    description: "Conducted R&D on photorealistic 3D avatars using Gaussian Splatting with facial expression reconstruction and animation for immersive XR interaction.",
+    filterTags: ["cv", "3d", "research"],
+    displayTags: ["Research", "3D", "CV"],
+    featured: true,
+    tech: ["Python", "Gaussian Splatting", "Unity", "C#", "3D Reconstruction"],
+  },
+  {
+    id: 5,
     title: "Hairstyle AR — Real-Time Face Tracking",
     imageUrl: "https://static.tildacdn.com/tild6231-6232-4635-b464-333338356361/cfD9pU955vo.jpg",
     description: "Real-time AR application for interactive 3D hairstyle try-on. Face detection and tracking with OpenCV/Dlib, 3D rendering with OpenGL. Open-source: 15★, 7 forks.",
@@ -55,7 +64,7 @@ export const projects: Project[] = [
     tech: ["C++", "Qt5", "OpenCV", "Dlib", "OpenGL"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Coin Recognition — Sberbank",
     imageUrl: "https://static.tildacdn.com/tild3665-3933-4339-b361-633465616234/what-coins-does-Sber.webp",
     description: "Real-time coin detection and classification with YOLOv3. Dataset of 400k+ annotated images, ~200 classes, >85% accuracy. Demonstrated at Eastern Economic Forum 2019.",
@@ -65,7 +74,7 @@ export const projects: Project[] = [
     tech: ["Python", "Darknet (YOLOv3)", "OpenCV", "CVAT", "imgaug"],
   },
   {
-    id: 6,
+    id: 7,
     title: "VR Training Simulator — Dubai Municipality",
     imageUrl: "https://static.tildacdn.com/tild6633-6164-4034-b731-316436623938/croc.jpg",
     description: "VR training system for municipal employees covering water treatment facility operations. Includes automated level generation via procedural algorithms.",
@@ -75,7 +84,7 @@ export const projects: Project[] = [
     tech: ["Unity", "C#", "Unity Bolt", "Odin Inspector", "I2 Localization"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Englishville — VR Language Learning",
     imageUrl: "https://static.tildacdn.com/tild3862-3865-4638-b535-636563346265/photo_2020-08-21_10-.jpg",
     description: "VR-based English language learning app with interactive NPCs, real-time speech recognition and immersive communicative scenarios.",
@@ -86,7 +95,7 @@ export const projects: Project[] = [
     tech: ["Unreal Engine 4", "C++", "Blueprint", "Python", "Microsoft Cognitive Services"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Holo Interior — Mixed Reality Design",
     imageUrl: "https://static.tildacdn.com/tild6532-6139-4966-b263-333437303030/2019-02-14_16-21-06.png",
     description: "Mixed reality prototype for Microsoft HoloLens enabling interior design: wallpaper changes and furniture placement with real-time cost estimation.",
@@ -96,7 +105,7 @@ export const projects: Project[] = [
     tech: ["Unity", "C#", "MRTK", "HoloLens"],
   },
   {
-    id: 9,
+    id: 10,
     title: "AR Primorye — Regional Investment Platform",
     imageUrl: "https://static.tildacdn.com/tild6637-3237-4135-b037-376662313963/photo.png",
     description: "Mobile AR application demonstrating investment projects, regional industry centers and brands of Primorsky Region for government showcase.",
@@ -106,7 +115,7 @@ export const projects: Project[] = [
     tech: ["Unity", "C#", "ARKit", "ARCore"],
   },
   {
-    id: 10,
+    id: 11,
     title: "AR Exhibition Stands",
     imageUrl: "https://static.tildacdn.com/tild3761-3939-4761-b965-396534303366/noroot.png",
     description: "Exhibition stand AR app using marker recognition to trigger 3D graphics, animations and interactive elements for Primorsky Region events.",
@@ -116,7 +125,7 @@ export const projects: Project[] = [
     tech: ["Unity", "C#", "Vuforia SDK"],
   },
   {
-    id: 11,
+    id: 12,
     title: "Tower Defense: Save The Queen",
     imageUrl: "https://static.tildacdn.com/tild6333-6134-4164-b632-633062303663/noroot.png",
     description: "Mobile AR tower defense game. Team lead: two developers, two 3D designers. Marker-based AR with real-time physics and game mechanics.",
@@ -126,7 +135,7 @@ export const projects: Project[] = [
     tech: ["Unity", "C#", "Vuforia SDK"],
   },
   {
-    id: 12,
+    id: 13,
     title: "MATE ROV 2017 — Control System",
     description: "Control interface for an underwater robot (ROV). International Finals, Los Angeles. Real-time UDP control, video stream and operator dashboard in Qt.",
     filterTags: ["cv", "research"],
