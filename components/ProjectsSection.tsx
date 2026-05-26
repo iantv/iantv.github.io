@@ -15,7 +15,9 @@ const FILTERS: { key: Filter; label: string }[] = [
   { key: "vr-ar",   label: "VR / AR" },
   { key: "cv",      label: "Computer Vision" },
   { key: "3d",      label: "3D & Reconstruction" },
-  { key: "research",label: "Research" },
+  { key: "ai",       label: "AI" },
+  { key: "research", label: "R&D" },
+  { key: "robotics", label: "Robotics" },
 ];
 
 export default function ProjectsSection({ projects }: Props) {
