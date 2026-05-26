@@ -11,8 +11,45 @@ export default function Hero() {
         padding: "64px 24px 64px",
         display: "flex",
         flexDirection: "column",
+        position: "relative",
       }}
     >
+      {/* Animated background */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0 }}>
+        {/* Accent orb — top left */}
+        <div style={{
+          position: "absolute",
+          width: 480,
+          height: 480,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(226,255,93,0.28) 0%, transparent 65%)",
+          top: "-100px",
+          left: "-80px",
+          animation: "orb-drift-1 5s linear infinite",
+        }} />
+        {/* Cool blue orb — right */}
+        <div style={{
+          position: "absolute",
+          width: 400,
+          height: 400,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(120,160,255,0.24) 0%, transparent 65%)",
+          top: "-60px",
+          right: "-100px",
+          animation: "orb-drift-2 7s linear infinite",
+        }} />
+        {/* Dim accent orb — bottom center */}
+        <div style={{
+          position: "absolute",
+          width: 300,
+          height: 300,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(226,255,93,0.16) 0%, transparent 65%)",
+          bottom: "-80px",
+          left: "40%",
+          animation: "orb-drift-3 9s linear infinite",
+        }} />
+      </div>
       {/* Heading — centered at top */}
       <h1
         className="animate-fade-up hero-heading"
