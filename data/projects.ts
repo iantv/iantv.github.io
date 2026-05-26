@@ -23,6 +23,7 @@ export const projects: Project[] = [
     filterTags: ["vr-ar", "3d", "cv"],
     displayTags: ["3D Gaussian Splatting", "WEBXR"],
     featured: true,
+    imageUrl: "/gs.png",
     tech: ["Three.js", "MTS Cloud S3", "WebXR", "Python", "Gaussian Splatting"],
   },
   {
