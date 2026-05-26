@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ExperienceSection from "@/components/ExperienceSection";
+import MediaSection from "@/components/MediaSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import { projects } from "@/data/projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <ExperienceSection />
       <ProjectsSection projects={projects} />
+      <MediaSection />
       <ContactSection />
     </>
   );

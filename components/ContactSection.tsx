@@ -13,7 +13,7 @@ export default function ContactSection() {
       }}
     >
       <div style={{ marginBottom: 40, display: "flex", alignItems: "center", gap: 16 }}>
-        <span className="section-number">04</span>
+        <span className="section-number">05</span>
         <h2
           style={{
             fontSize: 22,

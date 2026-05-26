@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --bg: #0a0a0a;
   --bg-card: #111111;
@@ -256,4 +254,7 @@ body {
   /* Contact */
   .contact-section { padding: 40px 16px 60px !important; }
   .contact-grid { grid-template-columns: 1fr; }
+
+  /* Media */
+  .media-grid { grid-template-columns: 1fr !important; }
 }

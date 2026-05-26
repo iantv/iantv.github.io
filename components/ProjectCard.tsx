@@ -202,11 +202,16 @@ export default function ProjectCard({ project, index }: Props) {
         </div>
 
         {/* Links */}
-        {(project.liveUrl || project.sourceUrl) && (
-          <div style={{ display: "flex", gap: 6, paddingTop: 6, borderTop: "1px solid var(--border)" }}>
+        {(project.liveUrl || project.sourceUrl || project.videoUrl || project.extraLinks?.length) && (
+          <div style={{ display: "flex", gap: 6, paddingTop: 6, borderTop: "1px solid var(--border)", flexWrap: "wrap" }}>
             {project.liveUrl && (
               <a href={project.liveUrl} className="btn-link primary" target="_blank" rel="noopener noreferrer">
                 <span>↗</span> View Live
+              </a>
+            )}
+            {project.videoUrl && (
+              <a href={project.videoUrl} className="btn-link" target="_blank" rel="noopener noreferrer">
+                <span>▶</span> Watch Demo
               </a>
             )}
             {project.sourceUrl && (
@@ -214,6 +219,11 @@ export default function ProjectCard({ project, index }: Props) {
                 <span>⌥</span> Source
               </a>
             )}
+            {project.extraLinks?.map(link => (
+              <a key={link.label} href={link.url} className="btn-link" target="_blank" rel="noopener noreferrer">
+                <span>↗</span> {link.label}
+              </a>
+            ))}
           </div>
         )}
       </div>
