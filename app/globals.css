@@ -28,6 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -299,7 +300,7 @@ body {
 
   /* Experience */
   .exp-section { padding: 40px 16px !important; }
-  .exp-row { grid-template-columns: 1fr; gap: 2px; }
+  .exp-row { grid-template-columns: 1fr; gap: 10px; }
   .exp-period { padding-top: 0 !important; }
 
   /* Projects */
