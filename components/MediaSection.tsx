@@ -3,19 +3,19 @@
 const interviews = [
   {
     id: "Bj3fRc1DJpo",
-    title: "VR: Реальная виртуальность",
+    title: "[RU] Virtual Reality",
     label: "Podcast",
     url: "https://www.youtube.com/live/Bj3fRc1DJpo",
   },
   {
     id: "vw6JN_WxlAQ",
-    title: "Interview — Primamedia",
+    title: "[RU] Interview — Primamedia",
     label: "2019",
     url: "https://youtu.be/vw6JN_WxlAQ",
   },
   {
     id: "wPsj7LKz92Y",
-    title: "Global Game Jam",
+    title: "[RU + EN subtitles] Global Game Jam",
     label: "2021",
     url: "https://youtu.be/wPsj7LKz92Y",
   },
