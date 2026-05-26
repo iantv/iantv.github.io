@@ -26,7 +26,7 @@ export default function Hero() {
           marginBottom: 56,
         }}
       >
-        Building Real-Time<br />XR &amp; 3D Systems
+        XR / AI Systems Engineer
       </h1>
 
       {/* Two-column body */}
@@ -103,7 +103,7 @@ export default function Hero() {
                 boxShadow: "0 0 8px var(--accent)",
               }}
             />
-            Software Engineer · XR / 3D / CV
+            XR / AI Systems Engineer
           </div>
 
           <p
@@ -115,7 +115,7 @@ export default function Hero() {
               maxWidth: 420,
             }}
           >
-            From Gaussian Splatting pipelines to immersive VR training — combining computer vision, real-time rendering and XR engineering to build things that didn&apos;t exist before.
+            Designing real-time XR systems at the intersection of AI, rendering and spatial computing.
           </p>
 
           <div
@@ -166,6 +166,26 @@ export default function Hero() {
               Get in Touch
             </a>
           </div>
+
+          {/* Proof strip */}
+          <div
+            className="animate-fade-up delay-4"
+            style={{ marginTop: 32, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}
+          >
+            <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-muted)", marginRight: 4 }}>
+              Worked with
+            </span>
+            {["MTS", "Sberbank", "Dubai Municipality", "Steam"].map((name, i, arr) => (
+              <span key={name} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text-dim)", letterSpacing: "0.01em" }}>
+                  {name}
+                </span>
+                {i < arr.length - 1 && (
+                  <span style={{ color: "var(--border-hover)", fontSize: 10 }}>·</span>
+                )}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Right — 3 pillars */}
@@ -173,15 +193,15 @@ export default function Hero() {
           {[
             {
               num: "01",
-              text: "Led end-to-end XR platform at MTS (Future Crew) — Gaussian Splatting pipeline for real-time 3D reconstruction. Built and managed 8-person cross-functional team.",
+              text: "Built and led development of an XR reconstruction platform at MTS using Gaussian Splatting. Managed a cross-functional team of 8 across ML, XR and infrastructure.",
             },
             {
               num: "02",
-              text: "10+ shipped XR applications — Unity, Unreal Engine, WebXR, ARKit, ARCore, MRTK, HoloLens, Oculus Quest, HTC Vive.",
+              text: "Delivered 10+ XR applications across VR, AR and WebXR platforms, including HoloLens, Oculus Quest and HTC Vive.",
             },
             {
               num: "03",
-              text: "Deep C++/OpenCV background: real-time face tracking AR (open-source, 15★), YOLOv3 object detection (400k+ images, >85% accuracy).",
+              text: "Background in computer vision and real-time graphics: AR tracking, YOLOv3 detection pipelines and rendering systems.",
             },
           ].map((p, i) => (
             <div
