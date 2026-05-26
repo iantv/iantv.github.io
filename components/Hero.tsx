@@ -12,6 +12,7 @@ export default function Hero() {
         display: "flex",
         flexDirection: "column",
         position: "relative",
+        overflow: "hidden",
       }}
     >
       {/* Animated background */}
