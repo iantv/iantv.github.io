@@ -12,7 +12,6 @@ export default function Hero() {
         display: "flex",
         flexDirection: "column",
         position: "relative",
-        overflow: "hidden",
       }}
     >
       {/* Animated background */}
@@ -24,8 +23,8 @@ export default function Hero() {
           height: 480,
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(226,255,93,0.28) 0%, transparent 65%)",
-          top: "-100px",
-          left: "-80px",
+          top: "20px",
+          left: "40px",
           animation: "orb-drift-1 5s linear infinite",
         }} />
         {/* Cool blue orb — right */}
@@ -35,8 +34,8 @@ export default function Hero() {
           height: 400,
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(120,160,255,0.24) 0%, transparent 65%)",
-          top: "-60px",
-          right: "-100px",
+          top: "40px",
+          right: "60px",
           animation: "orb-drift-2 7s linear infinite",
         }} />
         {/* Dim accent orb — bottom center */}
@@ -46,7 +45,7 @@ export default function Hero() {
           height: 300,
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(226,255,93,0.16) 0%, transparent 65%)",
-          bottom: "-80px",
+          bottom: "40px",
           left: "40%",
           animation: "orb-drift-3 9s linear infinite",
         }} />
