@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "tanya_pro_vr — XR Engineer & Computer Vision",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <div className="noise" aria-hidden="true" />
         <Navbar />
         <main id="main">{children}</main>
+        <ScrollToTop />
         <footer
           style={{
             borderTop: "1px solid var(--border)",
