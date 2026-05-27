@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 export default function Hero() {
   return (
     <section
@@ -8,7 +10,7 @@ export default function Hero() {
       style={{
         maxWidth: 1100,
         margin: "0 auto",
-        padding: "64px 24px 64px",
+        padding: "92px 24px 64px",
         display: "flex",
         flexDirection: "column",
         position: "relative",
@@ -54,13 +56,13 @@ export default function Hero() {
       <h1
         className="animate-fade-up hero-heading"
         style={{
-          fontSize: "clamp(36px, 5.5vw, 72px)",
+          fontSize: "clamp(26px, 3.8vw, 52px)",
           fontWeight: 800,
           letterSpacing: "-0.04em",
           lineHeight: 1.05,
           color: "var(--text)",
           textAlign: "center",
-          marginBottom: 56,
+          marginBottom: 28,
         }}
       >
         XR / AI Systems Engineer
@@ -71,76 +73,20 @@ export default function Hero() {
         {/* Left */}
         <div>
           {/* Avatar */}
-          <div className="animate-fade-up delay-1" style={{ marginBottom: 24 }}>
-            <div style={{ position: "relative", display: "inline-block" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/avatar.jpg"
-                alt="Tatiana Zueva"
-                style={{
-                  width: 120,
-                  height: 120,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  objectPosition: "center top",
-                  display: "block",
-                  border: "2px solid var(--border)",
-                  boxShadow: "0 0 0 1px rgba(226,255,93,0.15), 0 8px 32px rgba(0,0,0,0.5)",
-                }}
-              />
-              {/* Name badge */}
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: -10,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  background: "#111",
-                  border: "1px solid var(--border)",
-                  borderRadius: 20,
-                  padding: "3px 10px",
-                  fontSize: 10,
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: "var(--accent)",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Tatiana Zueva
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="animate-fade-up delay-2"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              fontSize: 11,
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              color: "var(--accent)",
-              marginBottom: 20,
-              border: "1px solid rgba(226,255,93,0.25)",
-              padding: "4px 10px",
-              borderRadius: 20,
-              background: "rgba(226,255,93,0.06)",
-            }}
-          >
-            <span
+          <div className="animate-fade-up delay-1" style={{ marginBottom: 20, marginTop: -30 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/avatar.jpg"
+              alt="Tatiana Zueva"
               style={{
-                width: 6,
-                height: 6,
+                width: 142,
+                height: 142,
                 borderRadius: "50%",
-                background: "var(--accent)",
-                display: "inline-block",
-                boxShadow: "0 0 8px var(--accent)",
+                objectFit: "cover",
+                objectPosition: "center center",
+                display: "block",
               }}
             />
-            XR / AI Systems Engineer
           </div>
 
           <p
@@ -152,7 +98,7 @@ export default function Hero() {
               maxWidth: 420,
             }}
           >
-            Designing real-time XR systems at the intersection of AI, rendering and spatial computing.
+            Building real-time XR systems<br />where AI, rendering<br />and spatial computing converge.
           </p>
 
           <div
@@ -204,43 +150,20 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Proof strip */}
-          <div
-            className="animate-fade-up delay-4"
-            style={{ marginTop: 32, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}
-          >
-            <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-muted)", marginRight: 4 }}>
-              Worked with
-            </span>
-            {["MTS", "Sberbank", "Dubai Municipality", "Steam"].map((name, i, arr) => (
-              <span key={name} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text-dim)", letterSpacing: "0.01em" }}>
-                  {name}
-                </span>
-                {i < arr.length - 1 && (
-                  <span style={{ color: "var(--border-hover)", fontSize: 10 }}>·</span>
-                )}
-              </span>
-            ))}
-          </div>
         </div>
 
-        {/* Right — 3 pillars */}
+        {/* Right — 2 pillars + education */}
         <div style={{ display: "flex", flexDirection: "column" }}>
-          {[
+          {([
             {
               num: "01",
-              text: "Built and led development of an XR reconstruction platform at MTS using Gaussian Splatting. Managed a cross-functional team of 8 across ML, XR and infrastructure.",
+              text: <>Built and led development of an <b style={{ color: "rgba(255,255,255,0.88)", fontWeight: 700 }}>3D reconstruction platform</b> at MTS using Gaussian Splatting. Managed a cross-functional <b style={{ color: "var(--text)", fontWeight: 700 }}>team of 8</b> across ML, XR and infrastructure.</>,
             },
             {
               num: "02",
-              text: "Delivered 10+ XR applications across VR, AR and WebXR platforms, including HoloLens, Oculus Quest and HTC Vive.",
+              text: <>Delivered <b style={{ color: "var(--text)", fontWeight: 700 }}>10+ XR applications</b> across VR, AR and WebXR platforms, including HoloLens, Oculus Quest and HTC Vive.</>,
             },
-            {
-              num: "03",
-              text: "Background in computer vision and real-time graphics: AR tracking, YOLOv3 detection pipelines and rendering systems.",
-            },
-          ].map((p, i) => (
+          ] as { num: string; text: React.ReactNode }[]).map((p, i) => (
             <div
               key={p.num}
               className={`animate-fade-up delay-${i + 2}`}
@@ -248,7 +171,7 @@ export default function Hero() {
                 display: "flex",
                 gap: 16,
                 padding: "20px 0",
-                borderBottom: i < 2 ? "1px solid var(--border)" : "none",
+                borderBottom: "1px solid var(--border-hover)",
               }}
             >
               <span className="section-number" style={{ paddingTop: 2, minWidth: 22 }}>
@@ -259,6 +182,26 @@ export default function Hero() {
               </p>
             </div>
           ))}
+
+          {/* Proof strip */}
+          <div
+            className="animate-fade-up delay-5"
+            style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}
+          >
+            <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: "0.03em", textTransform: "uppercase", color: "var(--text-muted)", marginRight: 2 }}>
+              Worked at
+            </span>
+            {["MTS Web Services", "Sberbank", "CROC Immersive Technologies"].map((name, i, arr) => (
+              <span key={name} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text-dim)", letterSpacing: "0.01em" }}>
+                  {name}
+                </span>
+                {i < arr.length - 1 && (
+                  <span style={{ color: "var(--border-hover)", fontSize: 10 }}>·</span>
+                )}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

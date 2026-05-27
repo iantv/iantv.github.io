@@ -22,11 +22,15 @@ const FILTERS: { key: Filter; label: string }[] = [
 
 export default function ProjectsSection({ projects }: Props) {
   const [filter, setFilter] = useState<Filter>("all");
+  const [expanded, setExpanded] = useState(false);
 
   const filtered =
     filter === "all"
       ? projects
       : projects.filter(p => p.filterTags.includes(filter as FilterTag));
+
+  const visible = expanded ? filtered : filtered.filter(p => p.featured);
+  const hiddenCount = filtered.filter(p => !p.featured).length;
 
   return (
     <section
@@ -51,7 +55,7 @@ export default function ProjectsSection({ projects }: Props) {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <span className="section-number">04</span>
+          <span className="section-number">03</span>
           <h2 style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)" }}>
             Projects
           </h2>
@@ -104,10 +108,40 @@ export default function ProjectsSection({ projects }: Props) {
 
       {/* Grid */}
       <div className="projects-grid">
-        {filtered.map((project, i) => (
+        {visible.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
       </div>
+
+      {hiddenCount > 0 && (
+        <div style={{ marginTop: 24, display: "flex", justifyContent: "center" }}>
+          <button
+            onClick={() => setExpanded(e => !e)}
+            style={{
+              fontSize: 12,
+              fontWeight: 500,
+              color: "var(--text-muted)",
+              background: "transparent",
+              border: "1px solid var(--border)",
+              borderRadius: 20,
+              padding: "6px 18px",
+              cursor: "pointer",
+              letterSpacing: "0.02em",
+              transition: "all 0.15s",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.color = "var(--text)";
+              (e.currentTarget as HTMLElement).style.borderColor = "var(--border-hover)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.color = "var(--text-muted)";
+              (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+            }}
+          >
+            {expanded ? "Show less ↑" : `Show ${hiddenCount} more ↓`}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

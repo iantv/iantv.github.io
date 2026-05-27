@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const experiences = [
   {
     period: "03/2024 — 04/2025",
@@ -73,6 +75,9 @@ const experiences = [
 ];
 
 export default function ExperienceSection() {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? experiences : experiences.slice(0, 2);
+
   return (
     <section
       id="experience"
@@ -92,13 +97,13 @@ export default function ExperienceSection() {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column" }}>
-        {experiences.map((exp, i) => (
+        {visible.map((exp, i) => (
           <div
             key={i}
             className="animate-fade-up exp-row"
             style={{
               padding: "28px 0",
-              borderBottom: i < experiences.length - 1 ? "1px solid var(--border)" : "none",
+              borderBottom: i < visible.length - 1 ? "1px solid var(--border)" : "none",
               animationDelay: `${i * 0.1}s`,
               opacity: 0,
             }}
@@ -162,6 +167,33 @@ export default function ExperienceSection() {
           </div>
         ))}
       </div>
+
+      <button
+        onClick={() => setExpanded(e => !e)}
+        style={{
+          marginTop: 20,
+          fontSize: 12,
+          fontWeight: 500,
+          color: "var(--text-muted)",
+          background: "transparent",
+          border: "1px solid var(--border)",
+          borderRadius: 20,
+          padding: "6px 16px",
+          cursor: "pointer",
+          letterSpacing: "0.02em",
+          transition: "all 0.15s",
+        }}
+        onMouseEnter={e => {
+          (e.currentTarget as HTMLElement).style.color = "var(--text)";
+          (e.currentTarget as HTMLElement).style.borderColor = "var(--border-hover)";
+        }}
+        onMouseLeave={e => {
+          (e.currentTarget as HTMLElement).style.color = "var(--text-muted)";
+          (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+        }}
+      >
+        {expanded ? "Show less ↑" : `Show ${experiences.length - 2} more ↓`}
+      </button>
     </section>
   );
 }

@@ -33,7 +33,7 @@ export default function MediaSection() {
       }}
     >
       <div style={{ marginBottom: 32, display: "flex", alignItems: "center", gap: 16 }}>
-        <span className="section-number">05</span>
+        <span className="section-number">04</span>
         <h2 style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)" }}>
           Press &amp; Speaking
         </h2>
