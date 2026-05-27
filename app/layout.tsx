@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -19,6 +20,13 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
       </head>
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-C0FY3HK6BT" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-C0FY3HK6BT');
+        `}</Script>
         <div className="noise" aria-hidden="true" />
         <Navbar />
         <main id="main">{children}</main>
