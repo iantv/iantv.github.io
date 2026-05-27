@@ -49,8 +49,9 @@ export default function Navbar() {
           {[
             { label: "About", href: "#about" },
             { label: "Experience", href: "#experience" },
-            { label: "Press", href: "#press" },
+            { label: "Education", href: "#education" },
             { label: "Projects", href: "#projects" },
+            { label: "Press", href: "#press" },
             { label: "Contact", href: "#contact" },
           ].map(({ label, href }) => (
             <a

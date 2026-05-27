@@ -51,7 +51,7 @@ export default function ProjectsSection({ projects }: Props) {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <span className="section-number">03</span>
+          <span className="section-number">04</span>
           <h2 style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text)" }}>
             Projects
           </h2>
