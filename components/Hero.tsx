@@ -62,44 +62,64 @@ export default function Hero() {
           lineHeight: 1.05,
           color: "var(--text)",
           textAlign: "center",
-          marginBottom: 28,
+          marginBottom: 12,
         }}
       >
-        XR / AI Systems Engineer
+        XR Engineer & Technical Lead
       </h1>
+
+      <p
+        className="animate-fade-up"
+        style={{
+          fontSize: "clamp(13px, 1.4vw, 16px)",
+          color: "var(--text)",
+          textAlign: "center",
+          lineHeight: 1.6,
+          maxWidth: 600,
+          margin: "0 auto 28px",
+        }}
+      >
+        Building XR products from research prototypes to production systems.
+      </p>
 
       {/* Two-column body */}
       <div className="hero-body-grid">
-        {/* Left */}
-        <div>
+        {/* Left — photo + CTA */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           {/* Avatar */}
-          <div className="animate-fade-up delay-1" style={{ marginBottom: 20, marginTop: -30 }}>
+          <div className="animate-fade-up delay-1" style={{ marginBottom: 20, position: "relative", display: "inline-block" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/avatar.jpg"
               alt="Tatiana Zueva"
               style={{
-                width: 142,
-                height: 142,
+                width: 180,
+                height: 180,
                 borderRadius: "50%",
                 objectFit: "cover",
                 objectPosition: "center center",
                 display: "block",
               }}
             />
+            <div style={{
+              position: "absolute",
+              bottom: -10,
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "#111",
+              border: "1px solid var(--border)",
+              borderRadius: 20,
+              padding: "3px 10px",
+              fontSize: 9,
+              fontWeight: 700,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "var(--text-muted)",
+              whiteSpace: "nowrap",
+            }}>
+              Tatiana Zueva
+            </div>
           </div>
-
-          <p
-            className="animate-fade-up delay-3"
-            style={{
-              fontSize: 15,
-              color: "var(--text-dim)",
-              lineHeight: 1.7,
-              maxWidth: 420,
-            }}
-          >
-            Building real-time XR systems<br />where AI, rendering<br />and spatial computing converge.
-          </p>
 
           <div
             className="animate-fade-up delay-4"
@@ -149,19 +169,22 @@ export default function Hero() {
               Get in Touch
             </a>
           </div>
-
         </div>
 
-        {/* Right — 2 pillars + education */}
+        {/* Right — 2 pillars + worked at */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           {([
             {
               num: "01",
-              text: <>Built and led development of an <b style={{ color: "rgba(255,255,255,0.88)", fontWeight: 700 }}>3D reconstruction platform</b> at MTS using Gaussian Splatting. Managed a cross-functional <b style={{ color: "var(--text)", fontWeight: 700 }}>team of 8</b> across ML, XR and infrastructure.</>,
+              text: <><b style={{ color: "var(--text)", fontWeight: 700 }}>12+ years</b> building XR, computer vision and real-time 3D systems, from research to production.</>,
             },
             {
               num: "02",
-              text: <>Delivered <b style={{ color: "var(--text)", fontWeight: 700 }}>10+ XR applications</b> across VR, AR and WebXR platforms, including HoloLens, Oculus Quest and HTC Vive.</>,
+              text: <>Led an XR R&D platform from concept to MVP, including <b style={{ color: "rgba(255,255,255,0.88)", fontWeight: 700 }}>Gaussian Splatting-based 3D reconstruction</b> and immersive collaboration technologies.</>,
+            },
+            {
+              num: "03",
+              text: <>Built and led an <b style={{ color: "var(--text)", fontWeight: 700 }}>8-person multidisciplinary team</b> spanning XR, ML, DevOps and Analytics.</>,
             },
           ] as { num: string; text: React.ReactNode }[]).map((p, i) => (
             <div
@@ -186,7 +209,7 @@ export default function Hero() {
           {/* Proof strip */}
           <div
             className="animate-fade-up delay-5"
-            style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}
+            style={{ marginTop: 28, display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}
           >
             <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: "0.03em", textTransform: "uppercase", color: "var(--text-muted)", marginRight: 2 }}>
               Worked at

@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* Right actions */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <a
-            href="https://drive.google.com/file/d/124kyrjED3kX8g620vMJhdvjGeGiFSMEW/view?usp=sharing"
+            href="https://drive.google.com/file/d/1t2AMajCNqQRWYge1E73H6Hjf7LPMulVT/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             style={{
