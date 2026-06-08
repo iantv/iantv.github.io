@@ -60,7 +60,10 @@ export default function Hero() {
           fontWeight: 800,
           letterSpacing: "-0.04em",
           lineHeight: 1.05,
-          color: "var(--text)",
+          background: "linear-gradient(90deg, #78a0ff 0%, #e2ff5d 100%)",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          WebkitTextFillColor: "transparent",
           textAlign: "center",
           marginBottom: 12,
         }}
